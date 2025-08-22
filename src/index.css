@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Add these to your index.css file */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Name cycling animation */
+        @keyframes slide-names {
+            0%, 25% {
+                transform: translateY(0);
+            }
+            30%, 55% {
+                transform: translateY(-100%);
+            }
+            60%, 85% {
+                transform: translateY(-200%);
+            }
+            90%, 100% {
+                transform: translateY(0);
+            }
+        }
+
+        .name-slider {
+            animation: slide-names 9s infinite ease-in-out;
+        }
